@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+
+
 import { IntlProvider } from "react-intl";
 import { addLocaleData } from "react-intl";
+
 import locale_en from 'react-intl/locale-data/en';
 import locale_es from 'react-intl/locale-data/es';
 import messages_es from "./translations/es.json";

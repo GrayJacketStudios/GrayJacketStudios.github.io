@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './css/App.css';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Header from './components/cabecera/Header';
 import Menu from './components/cabecera/Menu';
 import Main from './components/Main';
+
+import NotFound from './components/errores/NotFound';
 
 class App extends Component {
   render() {
@@ -16,9 +17,10 @@ class App extends Component {
           <Header />
         </header>
         <Menu />
-        <switch>
+        <Switch>
           <Route exact path="/" component={Main} />
-        </switch>
+          <Route component={NotFound} />
+        </Switch>
       </div>
     );
   }
