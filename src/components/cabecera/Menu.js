@@ -21,12 +21,12 @@ export default class Menu extends Component {
                 <nav>
                     <ul className="menu" id="menu">
                         <li><Link to="/">INICIO</Link></li>
-                        <li><Link to="/">QUE HACEMOS</Link></li>
-                        <li><Link to="/">TECNOLOGIAS</Link></li>
-                        <li><Link to="/">NUESTROS TRABAJOS</Link></li>
-                        <li><Link to="/">NUESTROS JUEGOS</Link></li>
-                        <li><Link to="/">QUIENES SOMOS</Link></li>
-                        <li><Link to="/">CONTACTANOS</Link></li>
+                        <li><Link to="/what-we-do">QUE HACEMOS</Link></li>
+                        <li><Link to="/tecnologies">TECNOLOGIAS</Link></li>
+                        <li><Link to="/our-work">NUESTROS TRABAJOS</Link></li>
+                        <li><Link to="/our-games">NUESTROS JUEGOS</Link></li>
+                        <li><Link to="/who-we-are">QUIENES SOMOS</Link></li>
+                        <li><Link to="/contact-us">CONTACTANOS</Link></li>
                         <li><a href="javascript:void(0);" class="icon" onClick={this.myFunction}>
                             <i class="fa fa-bars"></i>
                         </a></li>
