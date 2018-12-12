@@ -25,12 +25,13 @@ addLocaleData([...locale_en, ...locale_es]);
 
 
 ReactDOM.render((
-    <BrowserRouter>
-        <IntlProvider locale={language} messages={messages[language]}>
-            <App />
-        </IntlProvider>
+    <IntlProvider locale={language} messages={messages[language]}>
+        <BrowserRouter>
 
-    </BrowserRouter>
+            <App />
+
+        </BrowserRouter>
+    </IntlProvider >
 ), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
