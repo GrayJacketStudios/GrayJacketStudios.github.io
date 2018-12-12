@@ -6,9 +6,29 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
 
+import { IntlProvider } from "react-intl";
+import { addLocaleData } from "react-intl";
+
+import locale_en from 'react-intl/locale-data/en';
+import locale_es from 'react-intl/locale-data/es';
+import messages_es from "./translations/es.json";
+import messages_en from "./translations/en.json";
+
+const messages = {
+    'es': messages_es,
+    'en': messages_en
+};
+const language = navigator.language.split(/[-_]/)[0];  // language without region code
+
+
+addLocaleData([...locale_en, ...locale_es]);
+
+
 ReactDOM.render((
     <BrowserRouter>
-        <App />
+        <IntlProvider locale={language} messages={messages[language]}>
+            <App />
+        </IntlProvider>
 
     </BrowserRouter>
 ), document.getElementById('root'));
