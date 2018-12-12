@@ -1,0 +1,15 @@
+
+
+.carta{
+    margin-top: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: calc(10px + 1vmin);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+}
