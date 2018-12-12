@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 import '../../css/menu.css';
 
@@ -28,9 +28,9 @@ export default class Menu extends Component {
                         <li><Link to="/our-games"><FormattedMessage id="menu.juegos" /></Link></li>
                         <li><Link to="/who-we-are"><FormattedMessage id="menu.somos" /></Link></li>
                         <li><Link to="/contact-us"><FormattedMessage id="menu.contacto" /></Link></li>
-                        <li><a href="javascript:void(0);" class="icon" onClick={this.myFunction}>
+                        <li><button class="icon" onClick={this.myFunction}>
                             <i class="fa fa-bars"></i>
-                        </a></li>
+                        </button></li>
                     </ul>
 
                 </nav>
