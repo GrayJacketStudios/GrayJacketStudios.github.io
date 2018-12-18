@@ -4,37 +4,40 @@ import { FormattedMessage } from 'react-intl';
 
 import '../../css/menu.css';
 
+
+
+
+
 export default class Menu extends Component {
 
     myFunction() {
-        var x = document.getElementById("menu");
-        if (x.className === "menu") {
+        var x = document.getElementById("centered_nav");
+        if (x.className === "rc_nav") {
             x.className += " responsive";
         } else {
-            x.className = "menu";
+            x.className = "rc_nav";
         }
     }
 
 
+
+
     render() {
         return (
-            <div >
-                <nav>
-                    <ul className="menu" id="menu">
-                        <li><Link to="/"><FormattedMessage id="menu.inicio" /></Link></li>
-                        <li><Link to="/what-we-do"><FormattedMessage id="menu.hacemos" /></Link></li>
-                        <li><Link to="/tecnologies"><FormattedMessage id="menu.tecnologias" /></Link></li>
-                        <li><Link to="/our-work"><FormattedMessage id="menu.trabajos" /></Link></li>
-                        <li><Link to="/our-games"><FormattedMessage id="menu.juegos" /></Link></li>
-                        <li><Link to="/who-we-are"><FormattedMessage id="menu.somos" /></Link></li>
-                        <li><Link to="/contact-us"><FormattedMessage id="menu.contacto" /></Link></li>
-                        <li><button class="icon" onClick={this.myFunction}>
-                            <i class="fa fa-bars"></i>
-                        </button></li>
-                    </ul>
 
-                </nav>
+            <div>
+                <div className="rc_nav" id="centered_nav">
+                    <Link to="/"><FormattedMessage id="menu.inicio" /></Link>
+                    <Link to="/our-work"><FormattedMessage id="menu.trabajos" /></Link>
+                    <Link to="/our-games"><FormattedMessage id="menu.juegos" /></Link>
+                    <Link to="/who-we-are"><FormattedMessage id="menu.somos" /></Link>
+                    <Link to="/contact-us"><FormattedMessage id="menu.contacto" /></Link>
 
+                    <button title="Menu" className="icon" onClick={this.myFunction}>
+                        &#9776;
+                    </button>
+
+                </div>
             </div>
         )
     }

@@ -16,6 +16,7 @@ class App extends Component {
         <header className="App-header">
           <Header />
         </header>
+
         <Menu />
         <Switch>
           <Route exact path="/" component={Main} />

@@ -1,6 +1,7 @@
 
 
 .carta{
+    
     margin-top: 5vh;
     padding-top: 1vh;
     padding-bottom: 3vh;
@@ -12,4 +13,9 @@
     font-size: calc(10px + 1vmin);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+}
+
+.carta .inside{
+    width: 80%;
+    margin:0 auto;
 }
